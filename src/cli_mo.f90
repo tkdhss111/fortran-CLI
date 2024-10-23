@@ -127,10 +127,6 @@ contains
 
     end do
 
-!    if ( nargs > 0 ) then
-!      print '(a)', '======================================================'
-!    end if
-
     print *, 'Program name: '//trim(this%exe)
     print *, 'Number of command arguments: ', command_argument_count() / 2
     print *, 'Present working directory: '//trim(pwd)
