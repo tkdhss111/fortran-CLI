@@ -1,0 +1,50 @@
+program unit_test
+
+  use cli_mo
+
+  implicit none
+
+  type(cli_ty) :: cli
+  integer      :: i = 1
+
+  character(255) :: wd
+  integer        :: ind
+  real           :: coef
+  logical        :: is_ok
+
+  cli%title     = 'Program for Doing Something'
+  cli%exe       = 'my_app'
+  cli%author    = 'Firstname Lastname'
+  cli%copyright = '2024 Copyright(C) All Rights Reserved.'
+  cli%version   = '1.0'
+  cli%usage(i)  = 'Usage: '//trim(cli%exe)//' [OPTIONS]'               ;i=i+1
+  cli%usage(i)  = ''                                                   ;i=i+1
+  cli%usage(i)  = 'Example: '//trim(cli%exe)//' --wd ./data'           ;i=i+1
+  cli%usage(i)  = '                             --ind 1'               ;i=i+1
+  cli%usage(i)  = '                             --coef 2.2'            ;i=i+1
+  cli%usage(i)  = '                             --is_ok T'             ;i=i+1
+  cli%usage(i)  = ''                                                   ;i=i+1
+  cli%usage(i)  = 'Program Options:'                                   ;i=i+1
+  cli%usage(i)  = '  --wd    followed by path of working directory'    ;i=i+1
+  cli%usage(i)  = '  --ind   followed by index number'                 ;i=i+1
+  cli%usage(i)  = '  --coef  followed by coefficient'                  ;i=i+1
+  cli%usage(i)  = '  --is_ok followed by logical value'                ;i=i+1
+  cli%usage(i)  = ''                                                   ;i=i+1
+  cli%usage(i)  = '  -v, --version print version information and exit' ;i=i+1
+  cli%usage(i)  = '  -h, --help    print usage information and exit'   ;i=i+1
+  cli%n_usage   = i-1
+
+  call cli%get_args ( wd, ind, coef, is_ok )
+
+  print *, 'wd: ', trim(wd)
+  print *, 'ind: ', ind
+  print *, 'coef: ', coef
+  print *, 'is_ok: ', is_ok
+
+  print *, '~~~~~~~~~~~~ Help ~~~~~~~~~~~~~~~'
+  call execute_command_line ( './unit_test -h' )
+
+  print *, '~~~~~~~~~~~~ Version  ~~~~~~~~~~~~~~~'
+  call execute_command_line ( './unit_test -v' )
+
+end program
