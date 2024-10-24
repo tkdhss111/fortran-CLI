@@ -5,7 +5,7 @@ module cli_mo
   private
   public :: cli_ty
 
-  character(255) :: pwd, arg
+  character(255) :: arg
   integer        :: status, i_arg
 
   ! Dummy arguments to suppress -W-unused-functions message
@@ -16,6 +16,7 @@ module cli_mo
   logical ldummy
 
   type cli_ty
+    character(255) :: pwd, home
     character(19)  :: datetime
     character(255) :: title
     character(255) :: exe
@@ -65,10 +66,11 @@ contains
     logical,       intent(inout), optional :: is_ok
     integer nargs
 
-    call get_environment_variable ( 'PWD', pwd )
+    call get_environment_variable ( 'HOME', this%home )
+    call get_environment_variable ( 'PWD',   this%pwd )
 
     if ( .not. present( wd ) ) then
-      wd = pwd
+      wd = this%pwd
     end if
 
     this%datetime = get_datetime ()
@@ -129,7 +131,8 @@ contains
 
     print *, 'Program name: '//trim(this%exe)
     print *, 'Number of command arguments: ', command_argument_count() / 2
-    print *, 'Present working directory: '//trim(pwd)
+    print *, 'Home directory: '//trim(this%home)
+    print *, 'Present working directory: '//trim(this%pwd)
 
   end subroutine get_args
 
