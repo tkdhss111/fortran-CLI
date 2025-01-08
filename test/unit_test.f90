@@ -16,7 +16,7 @@ program unit_test
   cli%exe       = 'my_app'
   cli%author    = 'Firstname Lastname'
   cli%copyright = '2024 Copyright(C) All Rights Reserved.'
-  cli%version   = '1.0'
+  cli%version   = '1.0 (@date 2024-11-02.)'
   cli%usage(i)  = 'Usage: '//trim(cli%exe)//' [OPTIONS]'               ;i=i+1
   cli%usage(i)  = ''                                                   ;i=i+1
   cli%usage(i)  = 'Example: '//trim(cli%exe)//' --wd ./data'           ;i=i+1
