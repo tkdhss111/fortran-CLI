@@ -19,7 +19,7 @@ program unit_test
   cli%version   = '1.0 (@date 2024-11-02.)'
   cli%usage(i)  = 'Usage: '//trim(cli%app)//' [OPTIONS]'               ;i=i+1
   cli%usage(i)  = ''                                                   ;i=i+1
-  cli%usage(i)  = 'Example: '//trim(cli%app)//' --wd ./data'           ;i=i+1
+  cli%usage(i)  = 'Example: '//trim(cli%exe)//' --wd ./data'           ;i=i+1
   cli%usage(i)  = '                             --ind 1'               ;i=i+1
   cli%usage(i)  = '                             --coef 2.2'            ;i=i+1
   cli%usage(i)  = '                             --is_ok T'             ;i=i+1

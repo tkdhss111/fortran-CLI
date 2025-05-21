@@ -1,0 +1,49 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CMAKE	makefile	/^CMAKE       := cmake .. -GNinja -DCMAKE_BUILD_TYPE=Debug$/;"	m
+MKDIR_BUILD	makefile	/^MKDIR_BUILD := mkdir -p build && cd build$/;"	m
+MKFILE	src/makefile	/^MKFILE:=-C .. -f makefile$/;"	m
+MKFILE	test/makefile	/^MKFILE:=-C .. -f makefile$/;"	m
+app	src/cli_mo.f90	/^    character(255) :: app$/;"	k	type:cli_ty
+arg	src/cli_mo.f90	/^  character(255) :: arg$/;"	v	module:cli_mo
+author	src/cli_mo.f90	/^    character(255) :: author$/;"	k	type:cli_ty
+cdummy	src/cli_mo.f90	/^  character(255) cdummy$/;"	v	module:cli_mo
+cli	test/unit_test.f90	/^  type(cli_/;"	v	program:unit_test
+cli_mo	src/cli_mo.f90	/^module cli_mo$/;"	m
+cli_ty	src/cli_mo.f90	/^  type cli_ty$/;"	t	module:cli_mo
+coef	test/unit_test.f90	/^  real           :: coef$/;"	v	program:unit_test
+copyright	src/cli_mo.f90	/^    character(255) :: copyright$/;"	k	type:cli_ty
+datetime	src/cli_mo.f90	/^    character(19)  :: datetime$/;"	k	type:cli_ty
+get_args	src/cli_mo.f90	/^  subroutine get_args /;"	s
+get_datetime	src/cli_mo.f90	/^  function get_datetime /;"	f
+home	src/cli_mo.f90	/^    character(255) :: pwd, home$/;"	k	type:cli_ty
+i	test/unit_test.f90	/^  in/;"	v	program:unit_test
+i_arg	src/cli_mo.f90	/^      integer, intent(inout) :: i_arg$/;"	v
+i_arg	src/cli_mo.f90	/^    integer     , intent(inout) :: i_arg$/;"	v
+i_arg	src/cli_mo.f90	/^    integer, intent(inout) :: i_arg$/;"	v
+i_arg	src/cli_mo.f90	/^  integer        :: status, i_arg$/;"	v	module:cli_mo
+idummy	src/cli_mo.f90	/^  integer idummy$/;"	v	module:cli_mo
+ind	test/unit_test.f90	/^  integer        :: ind$/;"	v	program:unit_test
+is_ok	test/unit_test.f90	/^  logical        :: is_ok$/;"	v	program:unit_test
+ival	src/cli_mo.f90	/^    integer, intent(inout) :: ival$/;"	v
+ldummy	src/cli_mo.f90	/^  logical ldummy$/;"	v	module:cli_mo
+n_usage	src/cli_mo.f90	/^    integer        :: n_usage$/;"	k	type:cli_ty
+ok	src/cli_mo.f90	/^      logical, intent(inout) :: ok$/;"	v
+ok	src/cli_mo.f90	/^    logical, intent(inout) :: ok$/;"	v
+print_help	src/cli_mo.f90	/^  subroutine print_help /;"	s
+print_version	src/cli_mo.f90	/^  subroutine print_version /;"	s
+pwd	src/cli_mo.f90	/^    character(255) :: pwd,/;"	k	type:cli_ty
+rdummy	src/cli_mo.f90	/^  real rdummy$/;"	v	module:cli_mo
+rval	src/cli_mo.f90	/^      real,    intent(inout) :: rval$/;"	v
+rval	src/cli_mo.f90	/^    real,    intent(inout) :: rval$/;"	v
+status	src/cli_mo.f90	/^  integer        :: status,/;"	v	module:cli_mo
+str	src/cli_mo.f90	/^    character(*), intent(inout) :: str$/;"	v
+title	src/cli_mo.f90	/^    character(255) :: title$/;"	k	type:cli_ty
+unit_test	test/unit_test.f90	/^program unit_test$/;"	p
+usage	src/cli_mo.f90	/^    character(255) :: usage(/;"	k	type:cli_ty
+version	src/cli_mo.f90	/^    character(255) :: version$/;"	k	type:cli_ty
+wd	test/unit_test.f90	/^  character(255) :: wd$/;"	v	program:unit_test

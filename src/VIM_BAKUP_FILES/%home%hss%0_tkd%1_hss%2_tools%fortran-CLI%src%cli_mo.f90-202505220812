@@ -228,7 +228,7 @@ contains
     character(*),  intent(in) :: datetime
 
     print '(a)', repeat('=', 80)
-    print '(a)', 'Executable file: '//trim(this%app)
+    print '(a)', 'Executable file: '//trim(this%exe)
     print '(a)', 'Version '//trim(this%version)
     print '(a)', 'Created by '// trim(this%author)
     print '(a)', trim(this%copyright)
